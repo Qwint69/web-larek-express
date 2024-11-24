@@ -51,6 +51,6 @@ export const createOrder = async (
 
     res.status(201).json({ id: orderId, total });
   } catch (error) {
-    next(error);
+    return next(error);
   }
 };

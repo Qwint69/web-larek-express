@@ -1,8 +1,8 @@
 export class ConflictError extends Error {
-    statusCode: number;
-  
-    constructor(message = 'Ресурс уже существует') {
-      super(message);
-      this.statusCode = 409;
-    }
+  statusCode: number;
+
+  constructor(message = "Ресурс уже существует") {
+    super(message);
+    this.statusCode = 409;
   }
+}

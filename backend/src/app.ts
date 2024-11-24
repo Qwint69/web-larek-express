@@ -21,7 +21,12 @@ mongoose
   });
 
 app.use(express.json());
-app.use(cors(origin));
+app.use(
+  cors({
+    origin: origin,
+    credentials: true,
+  })
+);
 app.use(requestLogger);
 app.use("/", product);
 app.use("/", order);
